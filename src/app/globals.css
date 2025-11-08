@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: silver;
   }
 }
 
@@ -52,9 +52,8 @@ body {
 
 .tag-dark {
   background-color: rgb(80, 80, 80);
-  padding: 8px;
-  margin-right: 8px;
+  padding: 4px;
+  margin-right: 4px;
   border-radius: 0.375rem;
+  font-size: 12px;
 }
-
-
