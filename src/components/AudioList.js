@@ -13,9 +13,9 @@ function AudioList({
 }) {
   return (
     <div
-      className="table-row hover:bg-neutral-700 hover:cursor-pointer"
+      className="table-row hover:bg-blue-900 hover:cursor-pointer"
       title={`click to play ${title}`}
-      onClick={() => handleSongSelect(src)}
+      onClick={() => handleSongSelect(src, title)}
     >
       <div className="table-cell rounded-l-md">
         {title} by {artist} - {genre}
