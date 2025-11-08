@@ -149,8 +149,18 @@ const audioPlayerList = [
 
 export default function Home() {
   return (
-    <div className="grid place-items-center px-12">
-      <AudioPlayer audioPlayerList={audioPlayerList} />
+    <div>
+      <div className="relative w-full h-128 overflow-hidden">
+        <Image
+          src="https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/images/A-Passage-Through-Twilight.png"
+          width={8854}
+          height={4000}
+          alt="cover picture for A Passage Through Twilight"
+        />
+      </div>
+      <div className="grid place-items-center px-12">
+        <AudioPlayer audioPlayerList={audioPlayerList} />
+      </div>
     </div>
   );
 }
