@@ -18,8 +18,9 @@ function AudioList({
       onClick={() => handleSongSelect(src, title)}
     >
       <div className="table-cell rounded-l-md">
-        <span className="font-bold text-xl">{title}</span> by {artist} - {genre}
+        <span className="font-bold text-xl">{title}</span>
       </div>
+      <div className="table-cell">{genre} </div>
       <div className="table-cell">{description}</div>
       <div className="hidden ml-2 flex-wrap gap-2.5 mt-2 rounded-r-md">
         {tags.map((item) => (

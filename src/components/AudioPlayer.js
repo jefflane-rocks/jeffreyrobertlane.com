@@ -43,9 +43,6 @@ function AudioPlayer({ audioPlayerList }) {
       `onRedrawComplete fired. onReadyFired=${onReadyFired} onRedrawFired=${onRedrawFired}`
     );
     setIsLoading(false);
-    // window.setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 4000);
   };
   const onRedraw = () => {
     console.log("onRedraw fired.");
