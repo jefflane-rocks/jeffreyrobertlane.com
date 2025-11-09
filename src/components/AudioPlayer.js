@@ -26,9 +26,16 @@ function AudioPlayer({ audioPlayerList }) {
       setOnReadyFired(false);
       console.log(`useEffect -> onReadyFired = ${onReadyFired}`);
       //   setOnRedrawFired((b) => !b);
+      wavesurfer.stop();
       wavesurfer.empty();
       wavesurfer.load(currentSong);
     }
+    // return () => {
+    //   if (wavesurfer) {
+    //     console.log("calling wavesurfer.destroy()");
+    //     wavesurfer.destroy();
+    //   }
+    // };
   }, [currentSong]);
 
   const onReady = (ws) => {
@@ -38,7 +45,7 @@ function AudioPlayer({ audioPlayerList }) {
     setCurrentSongDuration(getDuration(ws.getDuration()));
     setIsLoading(true);
     setOnReadyFired(true);
-    if (autoPlay) ws.playPause();
+    //if (autoPlay) ws.playPause();
   };
   const onRedrawComplete = (event) => {
     console.log(
@@ -66,21 +73,28 @@ function AudioPlayer({ audioPlayerList }) {
 
   const onFinish = () => {
     console.log(`onFinish is firing. isLoading = ${isLoading}`);
-    if (wavesurfer && autoPlay && !isLoading) {
-      if (autoPlay) {
-        if (currentSongIndex < audioPlayerList.length - 1) {
-          console.log(`currentSongIndex is ${currentSongIndex}`);
-          const nextSongIndex = currentSongIndex + 1;
-          console.log(`nextSongIndex is ${nextSongIndex}`);
-          setCurrentSongIndex((n) => n + 1);
-          handleSongSelect(
-            nextSongIndex,
-            audioPlayerList.at(nextSongIndex).src,
-            audioPlayerList.at(nextSongIndex).title
-          );
-        }
-      }
-    }
+    /* 
+        It appears there is an issue in wavesurfer that causes the following error in Safari:
+        Unhandled Promise Rejection: AbortError: Fetch is aborted
+        [Error] Failed to load resource: The operation couldn’t be completed. (WebKitBlobResource error 1.)
+
+        The autoPlay feature works fantastic in every other browser.  Need to figure out if this feature is ok to omit or if I should be finding a new waveform player.
+    */
+    // if (wavesurfer && autoPlay && !isLoading) {
+    //   if (autoPlay) {
+    //     if (currentSongIndex < audioPlayerList.length - 1) {
+    //       console.log(`currentSongIndex is ${currentSongIndex}`);
+    //       const nextSongIndex = currentSongIndex + 1;
+    //       console.log(`nextSongIndex is ${nextSongIndex}`);
+    //       setCurrentSongIndex((n) => n + 1);
+    //       handleSongSelect(
+    //         nextSongIndex,
+    //         audioPlayerList.at(nextSongIndex).src,
+    //         audioPlayerList.at(nextSongIndex).title
+    //       );
+    //     }
+    //   }
+    // }
   };
   function handleSongSelect(index, src, title) {
     console.log(`handleSongSelect src=${src}`);
@@ -142,6 +156,7 @@ function AudioPlayer({ audioPlayerList }) {
           tags={item.tags}
           description={item.description}
           src={item.src}
+          lyricVideo={item?.lyricVideo ?? ""}
           handleSongSelect={handleSongSelect}
         />
       ))}
