@@ -1,6 +1,7 @@
 "use client";
 
 function AudioList({
+  index,
   src,
   title,
   artist,
@@ -15,11 +16,12 @@ function AudioList({
     <div
       className="table-row hover:bg-sky-800 hover:cursor-pointer"
       title={`click to play ${title}`}
-      onClick={() => handleSongSelect(src, title)}
+      onClick={() => handleSongSelect(index, src, title)}
     >
       <div className="table-cell rounded-l-md">
-        <span className="font-bold text-xl">{title}</span> by {artist} - {genre}
+        <span className="font-bold text-xl">{title}</span>
       </div>
+      <div className="table-cell">{genre} </div>
       <div className="table-cell">{description}</div>
       <div className="hidden ml-2 flex-wrap gap-2.5 mt-2 rounded-r-md">
         {tags.map((item) => (
