@@ -7,6 +7,7 @@ import { getDuration } from "@/utilities/calc";
 
 function AudioPlayer({ audioPlayerList }) {
   const [currentSong, setCurrentSong] = useState(audioPlayerList.at(0).src);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [currentSongTitle, setCurrentSongTitle] = useState(
     audioPlayerList.at(0).title
   );
@@ -16,6 +17,7 @@ function AudioPlayer({ audioPlayerList }) {
   const [onReadyFired, setOnReadyFired] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [autoPlay, setAutoPlay] = useState(false);
 
   useEffect(() => {
     console.log("top of useEffect", wavesurfer);
@@ -24,7 +26,6 @@ function AudioPlayer({ audioPlayerList }) {
       setOnReadyFired(false);
       console.log(`useEffect -> onReadyFired = ${onReadyFired}`);
       //   setOnRedrawFired((b) => !b);
-      wavesurfer.stop();
       wavesurfer.empty();
       wavesurfer.load(currentSong);
     }
@@ -37,6 +38,7 @@ function AudioPlayer({ audioPlayerList }) {
     setCurrentSongDuration(getDuration(ws.getDuration()));
     setIsLoading(true);
     setOnReadyFired(true);
+    if (autoPlay) ws.playPause();
   };
   const onRedrawComplete = (event) => {
     console.log(
@@ -49,17 +51,48 @@ function AudioPlayer({ audioPlayerList }) {
     setOnRedrawFired(true);
   };
   const onPlayPause = () => {
-    wavesurfer && wavesurfer.playPause();
+    if (wavesurfer) {
+      wavesurfer.playPause();
+      setAutoPlay(true);
+    }
   };
+
+  const stop = () => {
+    if (wavesurfer) {
+      wavesurfer.stop();
+      setAutoPlay(false);
+    }
+  };
+
   const onFinish = () => {
-    wavesurfer && wavesurfer.stop();
+    console.log(`onFinish is firing. isLoading = ${isLoading}`);
+    if (wavesurfer && autoPlay && !isLoading) {
+      if (autoPlay) {
+        if (currentSongIndex < audioPlayerList.length - 1) {
+          console.log(`currentSongIndex is ${currentSongIndex}`);
+          const nextSongIndex = currentSongIndex + 1;
+          console.log(`nextSongIndex is ${nextSongIndex}`);
+          setCurrentSongIndex((n) => n + 1);
+          handleSongSelect(
+            nextSongIndex,
+            audioPlayerList.at(nextSongIndex).src,
+            audioPlayerList.at(nextSongIndex).title
+          );
+        }
+      }
+    }
   };
-  function handleSongSelect(src, title) {
+  function handleSongSelect(index, src, title) {
     console.log(`handleSongSelect src=${src}`);
     setIsLoading(true);
+    setCurrentSongIndex(index);
     setCurrentSong(src);
     setCurrentSongTitle(title);
   }
+  const wsEmpty = () => {
+    wavesurfer && wavesurfer.empty();
+  };
+
   return (
     <div className="centered-block">
       <div
@@ -80,6 +113,9 @@ function AudioPlayer({ audioPlayerList }) {
             )}
             &nbsp;{currentSongTitle}&nbsp;{currentSongDuration}
           </button>
+          {/* &nbsp;
+          <button onClick={wsEmpty}>Empty</button>&nbsp;
+          <button onClick={stop}>Stop</button> */}
         </div>
         <div className="inline-block align-middle flex-1">
           <WavesurferPlayer
@@ -96,9 +132,10 @@ function AudioPlayer({ audioPlayerList }) {
         </div>
       </div>
 
-      {audioPlayerList.map((item) => (
+      {audioPlayerList.map((item, index) => (
         <AudioList
-          key={item.title}
+          key={index}
+          index={index}
           title={item.title}
           genre={item.genre}
           artist={item.artist}
