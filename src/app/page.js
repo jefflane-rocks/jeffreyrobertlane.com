@@ -186,10 +186,15 @@ export default function Home() {
             Originally from Denver, Colorado, Jeff moved to Los Angeles to
             pursure songwriting and formed various projects.
           </p>
-          <p className="inline-block text-xl">
+          <p className="inline-block text-xl mb-2">
             Burningdown is his alternative rock project and Heart of Cygnus is
             his progressive metal project. He also composes classical and
             sometimes folk and country.
+          </p>
+          <p className="text-xl mb-2">
+            Jeff owns 100% of the songwriting, publishing, and sound recording
+            (including all stems), so song clearance is a one stop shop. All
+            songs are registered with ASCAP.
           </p>
           <hr className="my-4" />
           <p className="text-xl mt-2">Jeffrey Robert Lane</p>
