@@ -191,6 +191,14 @@ export default function Home() {
             his progressive metal project. He also composes classical and
             sometimes folk and country.
           </p>
+          <hr className="my-4" />
+          <p className="text-xl mt-2">Jeffrey Robert Lane</p>
+          <p className="text-xl">
+            <a href="mailto:jeff@jeffreyrobertlane.com">
+              jeff@jeffreyrobertlane.com
+            </a>
+          </p>
+          <p className="text-xl">(323) 452-3616</p>
         </div>
       </div>
     </div>
