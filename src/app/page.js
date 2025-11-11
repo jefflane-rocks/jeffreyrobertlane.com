@@ -1,6 +1,6 @@
-import Image from "next/image";
 import AudioPlayer from "@/components/AudioPlayer";
 import { PlayIcon } from "@heroicons/react/24/solid";
+import MainImage from "@/components/MainImage";
 
 const audioPlayerList = [
   {
@@ -161,14 +161,7 @@ const audioPlayerList = [
 export default function Home() {
   return (
     <div>
-      <div className="relative w-full h-128 overflow-hidden place-content-center min-w-[1480] min-h-[526] lg:transform-none sm:transform-[translateX(-250px)]">
-        <Image
-          src="https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/images/jeff_joshuatree_flyingv.png"
-          width={3434}
-          height={1221}
-          alt="Picture of Jeff Lane in Joshua Tree with Flying V guitar"
-        />
-      </div>
+      <MainImage />
       <div className="grid place-items-center px-12 my-4">
         <p className="inline-block">
           Click on a song title below to load the song in the player. Click the{" "}
