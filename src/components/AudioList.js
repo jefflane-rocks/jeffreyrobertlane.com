@@ -48,13 +48,14 @@ function AudioList({
             <Link
               href={lyricVideo}
               target="_blank"
-              className="font-bold text-base lg:text-xl hover:cursor-pointer rounded-md"
+              className="font-bold text-base lg:text-xl hover:cursor-pointer rounded-md "
             >
               <Image
-                src="/yt_logo_fullcolor_white_digital.png"
-                height={50}
-                width={148.778359511343805}
+                src="/yt_icon_red_digital.png"
+                height={40}
+                width={46.697674418604651}
                 alt="YouTube Logo"
+                className="block ml-auto mr-auto"
               />
             </Link>
           )}

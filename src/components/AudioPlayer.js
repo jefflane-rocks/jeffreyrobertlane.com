@@ -127,14 +127,11 @@ function AudioPlayer({ audioPlayerList }) {
             )}
             &nbsp;{currentSongTitle}&nbsp;{currentSongDuration}
           </button>
-          {/* &nbsp;
-          <button onClick={wsEmpty}>Empty</button>&nbsp;
-          <button onClick={stop}>Stop</button> */}
         </div>
         <div className="inline-block align-middle flex-1">
           <WavesurferPlayer
             height={112}
-            waveColor="lightblue"
+            waveColor="white"
             onReady={onReady}
             onRedraw={onRedraw}
             onRedrawcomplete={onRedrawComplete}
