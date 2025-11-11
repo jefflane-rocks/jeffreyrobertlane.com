@@ -161,7 +161,7 @@ const audioPlayerList = [
 export default function Home() {
   return (
     <div>
-      <div className="relative w-full h-128 overflow-hidden place-content-center min-w-[1480] min-h-[526]">
+      <div className="relative w-full h-128 overflow-hidden place-content-center min-w-[1480] min-h-[526] lg:transform-none sm:transform-[translateX(-250px)]">
         <Image
           src="https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/images/jeff_joshuatree_flyingv.png"
           width={3434}
