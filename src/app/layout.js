@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "JeffLane.Rocks",
+  title: "Jeff Lane",
   description: "Composer, Songwriter, Author and Musician.  Welcome!",
 };
 
