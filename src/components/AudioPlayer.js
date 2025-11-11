@@ -108,13 +108,13 @@ function AudioPlayer({ audioPlayerList }) {
   };
 
   return (
-    <div className="centered-block">
+    <div>
       <div
         className={`${isLoading ? "" : "hidden"} h-28 flex place-items-center`}
       >
         <p>Loading...</p>
       </div>
-      <div className={`${isLoading ? "hidden" : ""} flex`}>
+      <div className={`${isLoading ? "hidden" : ""} flex mb-3`}>
         <div className="inline-block mr-5 place-content-center ">
           <button
             onClick={onPlayPause}
@@ -145,21 +145,22 @@ function AudioPlayer({ audioPlayerList }) {
           />
         </div>
       </div>
-
-      {audioPlayerList.map((item, index) => (
-        <AudioList
-          key={index}
-          index={index}
-          title={item.title}
-          genre={item.genre}
-          artist={item.artist}
-          tags={item.tags}
-          description={item.description}
-          src={item.src}
-          lyricVideo={item?.lyricVideo ?? ""}
-          handleSongSelect={handleSongSelect}
-        />
-      ))}
+      <div className="table">
+        {audioPlayerList.map((item, index) => (
+          <AudioList
+            key={index}
+            index={index}
+            title={item.title}
+            genre={item.genre}
+            artist={item.artist}
+            tags={item.tags}
+            description={item.description}
+            src={item.src}
+            lyricVideo={item?.lyricVideo ?? ""}
+            handleSongSelect={handleSongSelect}
+          />
+        ))}
+      </div>
     </div>
   );
 }
