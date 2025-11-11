@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 function AudioList({
@@ -14,38 +15,61 @@ function AudioList({
   handleSongSelect,
 }) {
   return (
-    <div className="table-row">
-      <div
-        className="table-cell rounded-md  hover:bg-sky-800 hover:cursor-pointer"
-        title={`click to play ${title}`}
-        onClick={() => handleSongSelect(index, src, title)}
-      >
-        <span className="font-bold text-xl">{title}</span>
-      </div>
-      <div
-        className="table-cell"
-        title={lyricVideo && `click to open ${title} lyric video on YouTube`}
-      >
-        {lyricVideo && (
-          <Link
-            href={lyricVideo}
-            target="_blank"
-            className="font-bold text-xl hover:bg-sky-800 hover:cursor-pointer rounded-md p-2"
-          >
-            Watch Lyric Video on YouTube
-          </Link>
-        )}
-      </div>
-      <div className="table-cell">{genre}</div>
-      <div className="table-cell">{description}</div>
-      <div className="hidden ml-2 flex-wrap gap-2.5 mt-2 rounded-r-md">
-        {tags.map((item) => (
-          <span className="tag-dark" key={item}>
-            {item}
+    <>
+      {index == 0 && (
+        <div className="table-header-group">
+          <div className="table-row text-xl font-bold bg-gray-900">
+            <div className="table-cell">
+              <span className="w-full text-center">Song</span>
+            </div>
+            <div className="table-cell text-center">
+              <span className="w-full text-center">Lyric Video</span>
+            </div>
+            <div className="table-cell">Genre</div>
+            <div className="table-cell">Description</div>
+          </div>
+        </div>
+      )}
+      <div className="table-row">
+        <div
+          className="table-cell rounded-md  hover:bg-sky-800 hover:cursor-pointer max-w-50 text-wrap"
+          title={`click to play ${title}`}
+          onClick={() => handleSongSelect(index, src, title)}
+        >
+          <span className="font-bold text-base lg:text-xl w-full text-center">
+            {title}
           </span>
-        ))}
+        </div>
+        <div
+          className="table-cell"
+          title={lyricVideo && `click to open ${title} lyric video on YouTube`}
+        >
+          {lyricVideo && (
+            <Link
+              href={lyricVideo}
+              target="_blank"
+              className="font-bold text-base lg:text-xl hover:cursor-pointer rounded-md"
+            >
+              <Image
+                src="/yt_logo_fullcolor_white_digital.png"
+                height={50}
+                width={148.778359511343805}
+                alt="YouTube Logo"
+              />
+            </Link>
+          )}
+        </div>
+        <div className="table-cell text-base lg:text-lg">{genre}</div>
+        <div className="table-cell text-base lg:text-lg">{description}</div>
+        <div className="hidden ml-2 flex-wrap gap-2.5 mt-2 rounded-r-md">
+          {tags.map((item) => (
+            <span className="tag-dark" key={item}>
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

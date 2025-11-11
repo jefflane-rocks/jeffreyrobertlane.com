@@ -161,7 +161,7 @@ const audioPlayerList = [
 export default function Home() {
   return (
     <div>
-      <div className="relative w-full h-128 overflow-hidden place-content-center">
+      <div className="relative w-full h-128 overflow-y-hidden overflow-x-hidden place-content-center min-w-[1480] min-h-[526]">
         <Image
           src="https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/images/jeff_joshuatree_flyingv.jpg"
           width={3434}
@@ -169,15 +169,29 @@ export default function Home() {
           alt="Picture of Jeff Lane in Joshua Tree with Flying V guitar"
         />
       </div>
-      <div className="grid place-items-center px-12">
+      <div className="grid place-items-center px-12 my-4">
         <p className="inline-block">
           Click on a song title below to load the song in the player. Click the{" "}
-          <PlayIcon className="h-8 w-8 inline-block align-middle" /> button to
-          listen.
+          <PlayIcon className="h-8 w-8 inline-block align-middle" /> button next
+          to the waveform to listen.
         </p>
       </div>
       <div className="grid place-items-center px-12">
         <AudioPlayer audioPlayerList={audioPlayerList} />
+      </div>
+      <div className="grid align-text-top place-items-center px-12 mb-20">
+        <div className="max-w-4xl">
+          <h1 className="text-2xl font-bold w-full text-center mb-2">About</h1>
+          <p className="inline-block text-xl mb-2">
+            Originally from Denver, Colorado, Jeff moved to Los Angeles to
+            pursure songwriting and formed various projects.
+          </p>
+          <p className="inline-block text-xl">
+            Burningdown is his alternative rock project and Heart of Cygnus is
+            his progressive metal project. He also composes classical and
+            sometimes folk and country.
+          </p>
+        </div>
       </div>
     </div>
   );
