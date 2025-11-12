@@ -18,12 +18,12 @@ function AudioList({
     <>
       {index == 0 && (
         <div className="table-header-group">
-          <div className="table-row text-xl font-bold bg-gray-900">
+          <div className="table-row lg:text-xl sm:text-base font-bold bg-gray-900">
             <div className="table-cell">
               <span className="w-full text-center">Song</span>
             </div>
-            <div className="table-cell text-center">
-              <span className="w-full text-center">Lyric Video</span>
+            <div className="table-cell text-center lg:w-full sm:w-30">
+              <span className=" text-center">Lyric Video</span>
             </div>
             <div className="table-cell">Genre</div>
             <div className="table-cell">Description</div>
