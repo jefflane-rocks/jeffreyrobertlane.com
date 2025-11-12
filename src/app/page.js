@@ -160,7 +160,7 @@ const audioPlayerList = [
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full mr-auto ml-auto">
       <MainImage />
       <div className="grid place-items-center px-12 my-4">
         <p className="inline-block">
