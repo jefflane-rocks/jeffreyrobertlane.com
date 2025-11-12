@@ -22,7 +22,7 @@ function AudioList({
             <div className="table-cell">
               <span className="w-full text-center">Song</span>
             </div>
-            <div className="table-cell text-center lg:w-full sm:w-30">
+            <div className="table-cell text-center sm:w-31 w-35">
               <span className=" text-center">Lyric Video</span>
             </div>
             <div className="table-cell">Genre</div>
