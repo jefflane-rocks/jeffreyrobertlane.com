@@ -115,7 +115,7 @@ function AudioPlayer({ audioPlayerList }) {
         <p>Loading...</p>
       </div>
       <div className={`${isLoading ? "hidden" : ""} flex mb-3`}>
-        <div className="inline-block mr-5 place-content-center ">
+        <div className="playpausebutton pr-5 place-content-center ">
           <button
             onClick={onPlayPause}
             className="hover:cursor-pointer inline-block align-middle"
@@ -125,7 +125,10 @@ function AudioPlayer({ audioPlayerList }) {
             ) : (
               <PlayIcon className="h-8 w-8 inline-block align-middle" />
             )}
-            &nbsp;{currentSongTitle}&nbsp;{currentSongDuration}
+            <br />
+            {currentSongTitle}
+            <br />
+            {currentSongDuration}
           </button>
         </div>
         <div className="inline-block align-middle flex-1">
@@ -142,7 +145,7 @@ function AudioPlayer({ audioPlayerList }) {
           />
         </div>
       </div>
-      <div className="table">
+      <div className="table-container">
         {audioPlayerList.map((item, index) => (
           <AudioList
             key={index}
