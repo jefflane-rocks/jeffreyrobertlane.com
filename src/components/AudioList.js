@@ -22,10 +22,9 @@ function AudioList({
             <div className="table-cell">
               <span className="w-full text-center">Song</span>
             </div>
-            <div className="table-cell text-center sm:w-31 w-35">
-              <span className=" text-center">Lyric Video</span>
+            <div className="table-cell text-center">
+              <span className=" text-center">Video</span>
             </div>
-            <div className="table-cell">Genre</div>
             <div className="table-cell">Description</div>
           </div>
         </div>
@@ -60,8 +59,9 @@ function AudioList({
             </Link>
           )}
         </div>
-        <div className="table-cell text-base lg:text-lg">{genre}</div>
-        <div className="table-cell text-base lg:text-lg">{description}</div>
+        <div className="table-cell text-base lg:text-lg">
+          {genre} by {artist} - {description}
+        </div>
         <div className="hidden ml-2 flex-wrap gap-2.5 mt-2 rounded-r-md">
           {tags.map((item) => (
             <span className="tag-dark" key={item}>

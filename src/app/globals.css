@@ -25,11 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.table-container {
-  display: table; /* Makes the div behave like a <table> */
-  border-collapse: collapse; /* For collapsing borders if cells have borders */
-}
-
 .table-row {
   display: table-row; /* Makes the div behave like a <tr> */
 }
@@ -58,12 +53,40 @@ body {
   font-size: 12px;
 }
 
-.bgimage {
-  background-image: url("https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/images/jeff_joshuatree_flyingv.png");
-  position: relative;
-  background-position: 50%;
-  background-size: cover;
-}
 .bgimage_color {
   background-color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  .playpausebutton {
+    display: contents;
+  }
+  .bgimage {
+    background-image: url("https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/images/jeff_joshuatree_flyingv_cropped.png");
+    position: relative;
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .table-container {
+    display: table; /* Makes the div behave like a <table> */
+    border-collapse: collapse; /* For collapsing borders if cells have borders */
+    margin-left: -12px;
+    padding-left: 0px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .playpausebutton {
+    display: inline-block;
+  }
+  .bgimage {
+    background-image: url("https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/images/jeff_joshuatree_flyingv.png");
+    position: relative;
+    background-position: 50%;
+    background-size: cover;
+  }
+  .table-container {
+    display: table; /* Makes the div behave like a <table> */
+    border-collapse: collapse; /* For collapsing borders if cells have borders */
+  }
 }

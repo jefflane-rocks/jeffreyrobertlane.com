@@ -160,7 +160,7 @@ const audioPlayerList = [
 export default function Home() {
   return (
     <div className="w-full mr-auto ml-auto">
-      <div className="w-full h-128 bgimage bgimage_color"></div>;
+      <div className="w-full h-128 bgimage bgimage_color"></div>
       <div className="grid place-items-center px-12 my-4">
         <p className="inline-block">
           Click on a song title below to load the song in the player. Click the{" "}
