@@ -155,6 +155,23 @@ const audioPlayerList = [
       "Heart",
     ],
   },
+  {
+    src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/01%20Hydra%20vs.%20Leviathan.mp3",
+    title: "Hydra vs. Leviathan",
+    artist: "Heart of Cygnus",
+    lyricVideo: "https://youtu.be/_Al0AtXGxfY?si=V67BgerPxVQDpJMA",
+    genre: "Progressive Metal",
+    description: "An epic monster battle at sea.",
+    tags: [
+      "Hydra",
+      "Leviathan",
+      "Monster",
+      "Battle",
+      "Sci-Fi",
+      "Fantasy",
+      "Heart of Cygnus",
+    ],
+  },
 ];
 
 export default function Home() {
