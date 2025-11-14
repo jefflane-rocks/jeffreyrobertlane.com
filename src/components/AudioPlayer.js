@@ -157,6 +157,7 @@ function AudioPlayer({ audioPlayerList }) {
             description={item.description}
             src={item.src}
             lyricVideo={item?.lyricVideo ?? ""}
+            oneStop={item.oneStop}
             handleSongSelect={handleSongSelect}
           />
         ))}
