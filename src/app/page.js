@@ -16,6 +16,7 @@ const audioPlayerList = [
       "Determination",
       "Find yourself",
     ],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/02%20Move.mp3",
@@ -25,6 +26,7 @@ const audioPlayerList = [
     genre: "Alternative Rock",
     description: "An epic rock ballad about moving on and starting again",
     tags: ["Break away", "Start Over", "Reinvent", "Move", "Find yourself"],
+    oneStop: true,
   },
 
   {
@@ -44,6 +46,7 @@ const audioPlayerList = [
       "Broken Relationship",
       "Cheater",
     ],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/04%20Miracles.mp3",
@@ -54,6 +57,7 @@ const audioPlayerList = [
     description:
       "A song of faith and optimism that your dreams can come true if you believe and chase after them.",
     tags: ["Faith", "Optimism", "Hope", "Miracles", "Dream"],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/05%20Fifteen.mp3",
@@ -72,6 +76,7 @@ const audioPlayerList = [
       "Teen",
       "Teens",
     ],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/06%20Remember.mp3",
@@ -90,6 +95,7 @@ const audioPlayerList = [
       "Dedication",
       "Missing You",
     ],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/07%20Anything.mp3",
@@ -107,6 +113,7 @@ const audioPlayerList = [
       "For richer or poorer",
       "In sickness and in health",
     ],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/08%20Romeo.mp3",
@@ -116,6 +123,7 @@ const audioPlayerList = [
     genre: "Alternative Rock",
     description: "A song about forbidden love.",
     tags: ["Forbidden", "Love", "Elope", "Escape"],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/09%20Satellite.mp3",
@@ -137,6 +145,7 @@ const audioPlayerList = [
       "Hermosa Beach",
       "Manhattan Beach",
     ],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/10%20May%20The%20Road%20Bring%20You%20Home.mp3",
@@ -154,6 +163,7 @@ const audioPlayerList = [
       "Inner Voice",
       "Heart",
     ],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/01%20Hydra%20vs.%20Leviathan.mp3",
@@ -171,6 +181,7 @@ const audioPlayerList = [
       "Fantasy",
       "Heart of Cygnus",
     ],
+    oneStop: true,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/01%20Prelude.mp3",
@@ -180,6 +191,7 @@ const audioPlayerList = [
     genre: "Progressive Metal",
     description: "Prelude to Utopia Book One, a Sci-Fi tale",
     tags: ["SCi-fi", "Space", "Mind Control", "Orwellian", "Heart of Cygnus"],
+    oneStop: false,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/02%20Galactic%20Alliance.mp3",
@@ -189,6 +201,7 @@ const audioPlayerList = [
     genre: "Progressive Metal",
     description: "A Sci-Fi story about a future civilization in outer space",
     tags: ["Galactic Alliance", "Sci-Fi", "Space", "Heart of Cygnus"],
+    oneStop: false,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/08%20The%20Mountain%20King.mp3",
@@ -206,6 +219,7 @@ const audioPlayerList = [
       "Fantasy",
       "Heart of Cygnus",
     ],
+    oneStop: false,
   },
   {
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/13%20The%20Isles%20Of%20Ice.mp3",
@@ -225,6 +239,7 @@ const audioPlayerList = [
       "Fantasy",
       "Heart of Cygnus",
     ],
+    oneStop: false,
   },
 ];
 
@@ -255,9 +270,9 @@ export default function Home() {
             sometimes folk and country.
           </p>
           <p className="text-xl mb-2">
-            Jeff owns 100% of the songwriting, publishing, and sound recording
-            (including all stems), so song clearance is a one stop shop. All
-            songs are registered with ASCAP.
+            <sup>1</sup>Jeff owns 100% of the songwriting, publishing, and sound
+            recording (including all stems), so song clearance is a one stop
+            shop. All songs are registered with ASCAP.
           </p>
           <hr className="my-4" />
           <p className="text-xl mt-2">Jeffrey Robert Lane</p>
