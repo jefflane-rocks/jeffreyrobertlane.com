@@ -21,7 +21,7 @@ function AudioList({
         <div className="table-header-group">
           <div className="table-row lg:text-xl sm:text-base font-bold bg-gray-900">
             <div className="table-cell">
-              <span className="w-full">Song</span>
+              <span className="w-full text-center">Song</span>
             </div>
             <div className="table-cell text-center">
               <span className=" text-center">Video</span>
@@ -32,14 +32,13 @@ function AudioList({
       )}
       <div className="table-row">
         <div
-          className="table-cell rounded-md  hover:bg-sky-800 hover:cursor-pointer max-w-50 text-wrap items-center"
+          className="table-cell rounded-md  hover:bg-sky-800 hover:cursor-pointer max-w-50 text-wrap"
           title={`click to play ${title}`}
           onClick={() => handleSongSelect(index, src, title)}
         >
           <span className="font-bold text-base lg:text-xl w-full text-center">
             {title}
-          </span>{" "}
-          {oneStop ? <sup>1</sup> : ""}
+          </span>
         </div>
         <div
           className="table-cell"
