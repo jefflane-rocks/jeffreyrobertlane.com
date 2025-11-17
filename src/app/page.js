@@ -271,9 +271,9 @@ export default function Home() {
             sometimes folk and country.
           </p>
           <p className="text-xl mb-2">
-            <sup>1</sup>Jeff owns 100% of the songwriting, publishing, and sound
-            recording (including all stems), so song clearance is a one stop
-            shop. All songs are registered with ASCAP.
+            Jeff owns 100% of the songwriting, publishing, and sound recording
+            (including all stems), so song clearance is a one stop shop. All
+            songs are registered with ASCAP.
           </p>
           <hr className="my-4" />
           <p className="text-xl mt-2">Jeffrey Robert Lane</p>
