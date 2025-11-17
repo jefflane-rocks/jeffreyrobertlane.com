@@ -229,7 +229,7 @@ const audioPlayerList = [
     lyricVideo: "https://youtu.be/1pIWePrZepU",
     genre: "Progressive Metal",
     description:
-      "A fantasy tale of a witch lures ships and traps sailors in her ice kingdom.",
+      "A fantasy tale of a witch who lures ships and traps sailors in her ice kingdom.",
     tags: [
       "Ice",
       "Isles",
