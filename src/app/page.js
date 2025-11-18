@@ -16,7 +16,7 @@ const audioPlayerList = [
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/06%20Remember.mp3",
     title: "Remember",
     artist: "Burningdown",
-    lyricVideo: "https://youtu.be/60_oQKPAnuI",
+    lyricVideo: "https://youtu.be/VnRqnapkQGw",
     genre: "Alternative Rock",
     description:
       "A pledge of love and faithfulness even when separated by time and distance.",
@@ -53,7 +53,7 @@ const audioPlayerList = [
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/08%20Romeo.mp3",
     title: "Romeo",
     artist: "Burningdown",
-    lyricVideo: "https://youtu.be/1Jehpab8oYY",
+    lyricVideo: "https://youtu.be/6xQx4F9eXQs",
     genre: "Alternative Rock",
     description: "A song about forbidden love.",
     tags: ["Forbidden", "Love", "Elope", "Escape"],
@@ -63,7 +63,7 @@ const audioPlayerList = [
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/01%20Carry%20On.mp3",
     title: "Carry On",
     artist: "Burningdown",
-    lyricVideo: "https://youtu.be/GVIIQ6EnLPQ",
+    lyricVideo: "https://youtu.be/yMG3IJ22kik",
     genre: "Alternative Rock",
     description: "A song about starting over, finding yourself",
     tags: [
@@ -99,7 +99,7 @@ const audioPlayerList = [
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/04%20Miracles.mp3",
     title: "Miracles",
     artist: "Burningdown",
-    lyricVideo: "https://youtu.be/xPxxe9L6-EY",
+    lyricVideo: "https://youtu.be/fgSgZX4sHUY",
     genre: "Alternative Rock",
     description:
       "A song of faith and optimism that your dreams can come true if you believe and chase after them.",
@@ -110,7 +110,7 @@ const audioPlayerList = [
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/05%20Fifteen.mp3",
     title: "Fifteen",
     artist: "Burningdown",
-    lyricVideo: "https://youtu.be/AsKjI32LYkY",
+    lyricVideo: "https://youtu.be/8Ftignpxim8",
     genre: "Alternative Rock",
     description: "A song empathizing with teenage angst and insecurities.",
     tags: [
@@ -130,7 +130,7 @@ const audioPlayerList = [
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/09%20Satellite.mp3",
     title: "Satellite",
     artist: "Burningdown",
-    lyricVideo: "https://youtu.be/p9ky3wykQA0",
+    lyricVideo: "https://youtu.be/F3l2rjO879M",
     genre: "Alternative Rock",
     description:
       "A song inspired by driving on Pacific Coast Highway on a summer evening.",
@@ -152,7 +152,7 @@ const audioPlayerList = [
     src: "https://vnshanftypzvajpbbwxr.supabase.co/storage/v1/object/public/mp3s/10%20May%20The%20Road%20Bring%20You%20Home.mp3",
     title: "May the Road Bring You Home",
     artist: "Burningdown",
-    lyricVideo: "https://youtu.be/fmqyT8Kuf9k",
+    lyricVideo: "https://youtu.be/8ja2UkPaLhY",
     genre: "Folk",
     description: "A blessing, a prayer for your guidance.",
     tags: [
