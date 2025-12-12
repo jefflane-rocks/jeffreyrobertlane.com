@@ -30,12 +30,12 @@ function AudioList({
           </div>
         </div>
       )}
-      <div className="table-row">
-        <div
-          className="table-cell rounded-md  hover:bg-sky-800 hover:cursor-pointer max-w-50 text-wrap"
-          title={`click to play ${title}`}
-          onClick={() => handleSongSelect(index, src, title)}
-        >
+      <div
+        className="table-row hover:cursor-pointer"
+        title={`click to play ${title}`}
+        onClick={() => handleSongSelect(index, src, title)}
+      >
+        <div className="table-cell rounded-md max-w-50 text-wrap">
           <span className="font-bold text-base lg:text-xl w-full text-center">
             {title}
           </span>
