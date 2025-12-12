@@ -249,12 +249,12 @@ export default function Home() {
     <div className="w-full mr-auto ml-auto">
       <div className="w-full h-128 bgimage bgimage_color"></div>
       <div className="grid place-items-center px-12 my-4">
-        <p className="inline-block">
+        {/* <p className="inline-block">
           Click on a song title below to load the song in the player. Click the{" "}
           <PlayIcon className="h-8 w-8 inline-block align-middle" /> button next
           to the waveform to listen. All songs are 100% created and performed by
           organic humans.
-        </p>
+        </p> */}
       </div>
       <div className="grid place-items-center px-12">
         <AudioPlayer audioPlayerList={audioPlayerList} />
